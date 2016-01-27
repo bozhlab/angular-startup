@@ -7,8 +7,11 @@
     </title>
 </head>
 
-<body>
-    {{ 2+2 }}
+<body ng-init='name = "guest"'>
+    <input type="text" ng-model='name' />
+    <br/>
+    <p>Hello {{ name }}</p>
+    <p> Hello {{ name | uppercase }}</p>
     <script type="text/javascript" src="assets/angular.min.js"></script>
 </body>
 
