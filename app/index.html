@@ -9,7 +9,15 @@
 
 <body>
     <div ng-controller="userController">
-        {{ message }}
+        <p>Search any
+            <input ng-model="search.$" />
+        </p>
+        <p>Search by name
+            <input ng-model="search.name" />
+        </p>
+        <div ng-repeat="user in users | filter:search ">
+            {{ message + " " +user.name + " " +user.lastName }}
+        </div>
     </div>
     <script type="text/javascript" src="assets/angular.min.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
