@@ -6,6 +6,10 @@ myApp.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'views/user/index.html',
         controller: 'userController'
     }).
+    when('/users/:id', {
+        templateUrl: 'views/user/detail.html',
+        controller: 'userDetailController'
+    }).
     otherwise({
         redirectTo: '/users'
     });

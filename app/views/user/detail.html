@@ -1,0 +1,6 @@
+<div ng-controller="userDetailController">
+    Name : {{ user.name + user.lastName }}
+    <div ng-repeat="img in user.images">
+        <img ng-src="images/{{ img }}" width="{{width}}" height="{{height}}" />
+    </div>
+</div>

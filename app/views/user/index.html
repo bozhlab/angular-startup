@@ -9,6 +9,7 @@
         <input ng-model="search.name" />
     </p>
     <div ng-repeat="user in users | filter:search ">
-        {{ message + " " +user.name + " " +user.lastName }}
+        {{ message }}
+        <a ng-href="/#/users/{{ user.id}}">{{ user.name + " " +user.lastName }} </a>
     </div>
 </div>

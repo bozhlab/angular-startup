@@ -1,17 +1,22 @@
 [
     {
+        "id": "6",
         "name": "Charles Francis",
         "lastName": "Xavier"
 }, {
+        "id": "7",
         "name": "Scott",
         "lastName": "Summers"
 }, {
+        "id": "8",
         "name": "James 'Logan'",
         "lastName": "Howlett"
 }, {
+        "id": "9",
         "name": "Max 'Magnus'",
         "lastName": "Eisenhardt"
 }, {
+        "id": "10",
         "name": "Pietro Django",
         "lastName": "Maximoff"
 }
