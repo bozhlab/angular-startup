@@ -1,0 +1,22 @@
+<div ng-controller="userAddController">
+    <form novalidate name="formAdd">
+        Name:
+        <input type="text" name="name" ng-model="user.name" />
+        <br /> LastName:
+        <input type="text" name="lastName" ng-model="user.lastName" />
+        <br />
+        <input type="button" ng-click="reset(formAdd)" value="Reset" />
+    </form>
+
+
+    {{ formAdd }}
+    <br/>error : {{ formAdd.$error }}
+    <br/>dirty : {{ formAdd.$dirty }}
+    <br/>pristine : {{ formAdd.$pristine }}
+    <br/>valid : {{ formAdd.$valid }}
+    <br/>invalid : {{ formAdd.$invalid }}
+    <br/>submitted : {{ formAdd.$submitted }}
+    <br/>
+    <br/>Name Touched: {{formAdd.name.$touched}}
+    <br/>LastName Touched: {{formAdd.lastName.$touched}}
+</div>
