@@ -7,22 +7,9 @@
     </title>
 </head>
 
-<body>
-    <div ng-controller="userController">
-        <p>
-            <input type="button" ng-click="loadUser()" value="loadUser" />
-        </p>
-        <p>Search any
-            <input ng-model="search.$" />
-        </p>
-        <p>Search by name
-            <input ng-model="search.name" />
-        </p>
-        <div ng-repeat="user in users | filter:search ">
-            {{ message + " " +user.name + " " +user.lastName }}
-        </div>
-    </div>
+<body ng-view>
     <script type="text/javascript" src="assets/angular.min.js"></script>
+    <script type="text/javascript" src="assets/angular-route.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/services/userService.js"></script>
     <script type="text/javascript" src="scripts/controllers/userController.js"></script>

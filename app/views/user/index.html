@@ -1,0 +1,14 @@
+<div ng-controller="userController">
+    <p>
+        <input type="button" ng-click="loadUser()" value="loadUser" />
+    </p>
+    <p>Search any
+        <input ng-model="search.$" />
+    </p>
+    <p>Search by name
+        <input ng-model="search.name" />
+    </p>
+    <div ng-repeat="user in users | filter:search ">
+        {{ message + " " +user.name + " " +user.lastName }}
+    </div>
+</div>
