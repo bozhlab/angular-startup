@@ -1,4 +1,4 @@
-myApp.controller('userController', ['$scope', function ($scope) {
+myApp.controller('userController', ['$scope', '$http', function ($scope, $http) {
     $scope.message = 'hello';
     $scope.users = [
         {
@@ -22,4 +22,10 @@ myApp.controller('userController', ['$scope', function ($scope) {
             'lastName': 'Dyne'
         }
   ];
+
+    $scope.loadUser = function () {
+        $http.get('user.json').success(function (data) {
+            $scope.users = data;
+        });
+    };
 }]);
