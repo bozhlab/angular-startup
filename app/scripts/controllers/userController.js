@@ -1,4 +1,4 @@
-myApp.controller('userController', ['$scope', '$http', 'userService', function ($scope, $http, userService) {
+myApp.controller('userController', ['$scope', '$http', '$location', 'userService', function ($scope, $http, $location, userService) {
     $scope.message = 'hello';
     $scope.users = [
         {
@@ -32,5 +32,9 @@ myApp.controller('userController', ['$scope', '$http', 'userService', function (
         userService.getUserList().then(function (response) {
             $scope.users = response.data;
         });
+    };
+
+    $scope.addUser = function () {
+        $location.path("/users/add");
     };
 }]);

@@ -1,13 +1,15 @@
 <div ng-controller="userAddController">
-    <form novalidate name="formAdd">
+    <form novalidate name="formAdd" ng-submit="formAdd.$valid && add(user)">
         Name:
-        <input type="text" name="name" ng-model="user.name" />
+        <input type=" text" name="name" ng-model="user.name" required ng-minlength="4 " ng-maxlength="8 " />
+        <span ng-show="formAdd.$submitted && formAdd.name.$error.required">Required</span>
+        <span ng-show="formAdd.name.$error.minlength || formAdd.name.$error.maxlength">required 4-8 characters</span>
         <br /> LastName:
         <input type="text" name="lastName" ng-model="user.lastName" />
         <br />
         <input type="button" ng-click="reset(formAdd)" value="Reset" />
+        <input type="submit" value="Add" />
     </form>
-
 
     {{ formAdd }}
     <br/>error : {{ formAdd.$error }}
