@@ -37,4 +37,12 @@ myApp.controller('userController', ['$scope', '$http', '$location', 'userService
     $scope.addUser = function () {
         $location.path("/users/add");
     };
+
+    $scope.goIndex = function () {
+        $location.path("/users");
+    };
+
+    $scope.goIndex2 = function () {
+        $location.path("/users2");
+    };
 }]);

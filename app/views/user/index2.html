@@ -1,0 +1,20 @@
+<div ng-controller="userController">
+    <div>this is index2</div>
+    <input type="button" ng-click="goIndex()" value="Index" />
+    <p>
+        <input type="button" ng-click="loadUser()" value="loadUser" />
+        <input type="button" ng-click="addUser()" value="addUser" />
+    </p>
+    <p>Search any
+        <input ng-model="search.$" />
+    </p>
+    <p>Search by name
+        <input ng-model="search.name" />
+    </p>
+    <table class="table table-bordered">
+        <tr ng-repeat="user in users | filter:search ">
+            <td>{{ user.name + " " +user.lastName }}</td>
+            <td> <a ng-href="/#/users/{{ user.id}}">Detail</a></td>
+        </tr>
+    </table>
+</div>
